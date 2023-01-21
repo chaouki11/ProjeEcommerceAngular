@@ -1,0 +1,21 @@
+<div routerLink="/details/{{data.id}}" >
+  <div class="about-product text-center mt-2 "><img src={{data.image}} width="300">
+  <div>
+      <h4>{{data.title}}</h4>
+      <h6 class="mt-0 text-black-50">{{data.category}}</h6>
+      <h6 class="mt-0 text-black-50">{{data.description}} </h6>
+  </div>
+</div>
+<div class="stats mt-2 text-center" >
+  <div class="d-flex justify-content-between p-price ">Prix :{{data.price}} dhs</div>
+</div>
+<br></div>
+
+<div class="text-center">
+   <button   *ngIf="!addButton" type="button" class="btn  btn-primary w-50 " (click)="addButton = true" >Ajouter au Panier</button>
+</div>
+
+<div  *ngIf="addButton" class="d-flex w-50 ">
+  <input type="number"  min="1" max="10" class="form-control" [(ngModel)]="amount">
+  <button class="btn btn-danger" (click)="add() ;addButton=false">Ajouter</button>
+</div>

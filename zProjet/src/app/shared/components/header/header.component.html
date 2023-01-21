@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <!-- <img src="bird.jpg" alt="logo" style="width:40px;"> -->
+  </a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="/produits" class="nav-link" style="font-size: x-large;" >Chaouki's E-Commerce</a>
+    </li>
+    <h2>_________</h2>
+    <li  class="nav-item">
+      <a routerLink="/produits" class="nav-link" style="font-size: large;"  >Produits</a>
+    </li>
+
+
+    <h2>___</h2>
+    <div class="form-group">
+
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="rechercher un produit">
+
+    </div>
+    <h2>__________________________________________________________</h2>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/cart"  style="font-size: large;">Panier</a>
+
+
+    </li>
+    <li class="nav-item">
+      <a routerLink="/login" class="nav-link"  style="font-size: large;">Login</a>
+    </li>
+  </ul>
+</nav>
